@@ -114,7 +114,7 @@ var ProgramDisplay = function(width, height) {
 	this.position = 0;
 };
 ProgramDisplay.prototype.Set = function(index, cond, inst, val) {
-	this.data[index] = (cond << 7) | (inst << 4) | val;
+	this.data[index] = ((cond & 1) << 7) | ((inst & 3) << 4) | (val & 0xf);
 };
 ProgramDisplay.prototype.Jump = function(offset) {
 	this.position = (this.position + offset) % (this.width * this.height);
@@ -295,7 +295,7 @@ DataDisplay.prototype.Get = function(index) {
 	return this.data[index] || 0;
 };
 DataDisplay.prototype.Set = function(index, value) {
-	this.data[index] = value;
+	this.data[index] = (value & 0xf);
 };
 DataDisplay.prototype.GetCurrent = function() {
 	return this.Get(this.position);
@@ -531,7 +531,7 @@ Game.prototype.Swap = function() {
 		this.conditional = Conditional.Input;
 };
 Game.prototype.SeekNextInstruction = function() {
-	while (this.program.GetCurrentCond() != this.conditional || this.program.IsCurrentNull())
+	for (var i = 0; i < this.program.width * this.program.height && (this.program.GetCurrentCond() != this.conditional || this.program.IsCurrentNull()); ++i)
 		this.program.Advance();
 };
 Game.prototype.Halt = function() {
