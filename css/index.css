@@ -1,0 +1,169 @@
+@import url('bitstreamverasansmono_bold_macroman/stylesheet.css');
+@import url('bitstreamverasansmono_boldoblique_macroman/stylesheet.css');
+@import url('bitstreamverasansmono_oblique_macroman/stylesheet.css');
+@import url('bitstreamverasansmono_roman_macroman/stylesheet.css');
+@import url('fontawesome/css/font-awesome.min.css');
+
+body {
+	font-family: 'Bitstream Vera Sans';
+	background-color: #000;
+	color: #fff;
+	font-size: 16px;
+}
+
+div.box {
+	border: 6px double #fff;
+	padding: 4px;
+}
+
+div.icon {
+	font-family: serif;
+}
+
+div#container {
+	width: 1024px;
+	margin: 30px auto 0 auto;
+	padding: 0;
+	border: 2px solid #fff;
+}
+
+div#main {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+}
+
+div#program {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	padding: 0;
+	flex: 1 0 0;
+	text-align: center;
+}
+div#state {
+	flex: 0 0 auto;
+}
+div.data {
+	text-align: center;
+}
+
+div.column {
+	flex: 1 0 0;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	text-align: left;
+}
+div#program div.column:first-child {
+	border-left: 0;
+}
+div#program div.column:last-child {
+	border-right: 0;
+}
+div.row {
+	margin: 2px 4px 2px 4px;
+	min-height: 19px;
+	text-indent: 16px;
+}
+div.row.current {
+	background-color: #fff;
+	color: #000;
+	font-weight: bold;
+}
+
+/* Editing UI */
+div.column textarea {
+	font-family: 'Bitstream Vera Sans';
+	width: 100%;
+	height: 168px;
+	margin: 0;
+	padding: 0;
+	padding-left: 20px;
+	border: 0;
+	background: transparent;
+	color: #fff;
+	font-size: 16px;
+	text-align: left;
+	outline: none;
+	resize: none;
+	line-height: 21px;
+	margin-top: 1px;
+	margin-bottom: -3px;
+}
+
+div.data {
+	border-color: #aaa;
+}
+div.data.active {
+	border-color: #fff;
+}
+div.data span {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+div.data span.current {
+	background-color: #fff;
+	color: #000;
+	font-weight: bold;
+}
+div.data span.undefined {
+	color: #999;
+}
+div.data span.undefined.current {
+	background-color: #aaa;
+	color: #444;
+}
+div#reference {
+	color: #aaa;
+}
+div#reference span.current {
+	background-color: #aaa;
+}
+
+div#control {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	padding: 0;
+}
+div#control > button {
+	display: block;
+	font-family: 'Bitstream Vera Sans';
+	font-size: 16px;
+	background-color: #000;
+	border: 0;
+	color: #fff;
+	flex: 1 0 0;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	text-align: center;
+	outline: none;
+}
+div#control > button:first-child {
+	border-left: 0;
+}
+div#control > button:last-child {
+	border-right: 0;
+}
+div#control > button i {
+	display: block;
+	font-size: 32px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+div#control > button:active {
+	color: #aaa;
+}
+div#control > button#runpause span#paused {
+	display: none;
+}
+div#control > button#runpause.paused span#paused {
+	display: inline;
+}
+div#control > button#runpause.paused span#running {
+	display: none;
+}

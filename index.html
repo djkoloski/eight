@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EIGHT</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div class="box">
+			<h1>TIS-888</h1>
+		</div>
+		<div id="description" class="box">
+			PUZZLE: COPY INPUT TO OUTPUT THEN HALT
+		</div>
+		<div id="input" class="box data">
+			<div>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</div>
+		</div>
+		<div id="main">
+			<div id="program" class="box">
+				<div class="column">
+					<div class="row">I SEQ 0</div>
+					<div class="row">O HLT &nbsp;</div>
+					<div class="row">I CPY &nbsp;</div>
+					<div class="row">I MOV 1</div>
+					<div class="row">I SWP &nbsp;</div>
+					<div class="row">O MOV 1</div>
+					<div class="row">O SWP &nbsp;</div>
+					<div class="row">O NOP &nbsp;</div>
+				</div>
+				<div class="column">
+					<div class="row">I SEQ 0</div>
+					<div class="row">O HLT &nbsp;</div>
+					<div class="row">I CPY &nbsp;</div>
+					<div class="row">I MOV 1</div>
+					<div class="row">I SWP &nbsp;</div>
+					<div class="row">O MOV 1</div>
+					<div class="row">O SWP &nbsp;</div>
+					<div class="row">O NOP &nbsp;</div>
+				</div>
+				<div class="column">
+					<div class="row">I SEQ 0</div>
+					<div class="row">O HLT &nbsp;</div>
+					<div class="row">I CPY &nbsp;</div>
+					<div class="row">I MOV 1</div>
+					<div class="row">I SWP &nbsp;</div>
+					<div class="row">O MOV 1</div>
+					<div class="row">O SWP &nbsp;</div>
+					<div class="row">O NOP &nbsp;</div>
+				</div>
+				<div class="column">
+					<div class="row">I SEQ 0</div>
+					<div class="row">O HLT &nbsp;</div>
+					<div class="row">I CPY &nbsp;</div>
+					<div class="row">I MOV 1</div>
+					<div class="row">I SWP &nbsp;</div>
+					<div class="row">O MOV 1</div>
+					<div class="row">O SWP &nbsp;</div>
+					<div class="row">O NOP &nbsp;</div>
+				</div>
+				<div class="column">
+					<div class="row">I SEQ 0</div>
+					<div class="row">O HLT &nbsp;</div>
+					<div class="row">I CPY &nbsp;</div>
+					<div class="row">I MOV 1</div>
+					<div class="row">I SWP &nbsp;</div>
+					<div class="row">O MOV 1</div>
+					<div class="row">O SWP &nbsp;</div>
+					<div class="row">O NOP &nbsp;</div>
+				</div>
+				<div class="column">
+					<div class="row">I SEQ 0</div>
+					<div class="row">O HLT &nbsp;</div>
+					<div class="row">I CPY &nbsp;</div>
+					<div class="row">I MOV 1</div>
+					<div class="row">I SWP &nbsp;</div>
+					<div class="row">O MOV 1</div>
+					<div class="row">O SWP &nbsp;</div>
+					<div class="row">O NOP &nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<div id="output" class="box data">
+				<div>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</div>
+		</div>
+		<div id="reference" class="box data">
+				<div>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</div>
+		</div>
+		<div id="control" class="box">
+			<button id="stop"><i class="fa fa-stop" aria-hidden="true"></i>STOP</button>
+			<button id="step"><i class="fa fa-step-forward" aria-hidden="true"></i>STEP</button>
+			<button id="runpause" class="paused">
+				<span id="paused"><i class="fa fa-play" aria-hidden="true"></i>RUN</span>
+				<span id="running"><i class="fa fa-pause" aria-hidden="true"></i>PAUSE</span>
+			</button>
+			<button id="fast"><i class="fa fa-fast-forward" aria-hidden="true"></i>FAST</button>
+		</div>
+		<div class="box">
+			<p>HLT: Halts execution and begins verification</p>
+			<p>MVR: Moves the active tape to the right once</p>
+			<p>MVL: Moves the active tape to the left once</p>
+			<p>SWP: Swaps the active tape from input to output or vice versa</p>
+			<p>SEQ X: Swaps the active tape if the symbol on the active tape is equal to the given value</p>
+			<p>ADD: Adds the current symbol on the inactive tape to the one on the active tape and writes the result to the active tape</p>
+			<p>SUB: Subtracs the current symbol on the inactive tape from the one on the active tape and writes the result to the active tape</p>
+			<p>JMP X: Jumps forward or backward by the given value</p>
+		</div>
+	</div>
+</body>
+</html>
