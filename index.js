@@ -548,10 +548,10 @@ Game.prototype.Halt = function() {
 Game.prototype.BeginEditing = function() {
 	this.state = GameState.Editing;
 
-	this.input.Reset();
+	this.input.Initialize(PUZZLES[this.currentPuzzle].input);
 	this.program.Reset();
 	this.output.ClearAndReset();
-	this.reference.Reset();
+	this.reference.Initialize(PUZZLES[this.currentPuzzle].output);
 
 	this.Render();
 };
